@@ -132,16 +132,22 @@
         .footer > p > i {
             margin: 0 5px;
         }
+
+        @media only screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            /*const filesData = [
+            const filesData = [
                 { "name":"Folder of a Down", "type":"directory", "mtime":"Wed, 07 Mar 2018 20:50:05 GMT" },
                 { "name":"570000000099601002726911.xml", "type":"file", "mtime":"Tue, 01 Apr 2014 10:33:24 GMT", "size":8582 }
-            ];*/ //ha nyomom a devet localon akkor kell
-            var filesData = JSON.parse(document.getElementsByClassName('files')[1].innerText);
+            ]; //ha nyomom a devet localon akkor kell
+            // var filesData = JSON.parse(document.getElementsByClassName('files')[1].innerText);
             let sorting = {
                 name: 'desc',
                 date: 'desc',
