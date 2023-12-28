@@ -1,5 +1,6 @@
 # nginx-autoindex
 Mi ez? - Kissé szebbé teszi az autoindex-et az nginxnek.
+<br/>
 Szabad szerkeszteni? - Igen, szerkeszhető/másolható.
 
 ## Hogyan használd?
