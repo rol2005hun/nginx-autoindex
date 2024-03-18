@@ -143,11 +143,11 @@
 <body>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            /* const filesData = [
+            const filesData = [
                 { "name":"Folder of a Down", "type":"directory", "mtime":"Wed, 07 Mar 2018 20:50:05 GMT" },
                 { "name":"570000000099601002726911.xml", "type":"file", "mtime":"Tue, 01 Apr 2014 10:33:24 GMT", "size":8582 }
-            ]; */ //ha nyomom a devet localon akkor kell
-            const filesData = JSON.parse(document.getElementsByClassName('files')[1].innerText);
+            ]; //ha nyomom a devet localon akkor kell
+            // const filesData = JSON.parse(document.getElementsByClassName('files')[1].innerText);
             let sorting = {
                 name: 'desc',
                 date: 'desc',
@@ -179,9 +179,9 @@
                     `;
                     fileDiv.onclick = function () {
                         if (file.type === 'file') {
-                            window.open(location.href + '/' + file.name, '_blank');
+                            window.open(location.href + file.name, '_blank');
                         } else {
-                            window.open(location.href + '/' + file.name, '_self');
+                            window.open(location.href + file.name, '_self');
                         }
                     };
                     filesContainer.appendChild(fileDiv);

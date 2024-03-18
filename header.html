@@ -179,9 +179,9 @@
                     `;
                     fileDiv.onclick = function () {
                         if (file.type === 'file') {
-                            window.open(location.href + '/' + file.name, '_blank');
+                            window.open(location.href + file.name, '_blank');
                         } else {
-                            window.open(location.href + '/' + file.name, '_self');
+                            window.open(location.href + file.name, '_self');
                         }
                     };
                     filesContainer.appendChild(fileDiv);
