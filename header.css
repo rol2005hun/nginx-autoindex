@@ -1,0 +1,169 @@
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.25em;
+}
+
+h1 {
+    color: #333;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 0.625em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 0.625em;
+}
+
+.path {
+    display: flex;
+    gap: 0.1875em;
+}
+
+.path > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 0.625em;
+}
+
+.filters {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.625em;
+}
+
+.filters label {
+    cursor: pointer;
+    color: #fff;
+}
+
+#searchInput {
+    padding: 0.5em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+}
+
+.files.info > .file {
+    padding: 0 0.9375em;
+}
+
+.files {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25em;
+    margin-top: 1.25em;
+}
+
+.file {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100vw / 1.618);
+    padding: 0.3125em 0.9375em;
+    border: 0.0625em solid #ccc;
+    text-align: left;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.file > a {
+    text-decoration: none;
+    color: #333;
+}
+
+.file-right {
+    display: flex;
+}
+
+.file-info {
+    color: #888;
+    margin-bottom: 0.625em;
+}
+
+.file-info.mid {
+    margin-left: 0.3125em;
+    margin-right: 0.3125em;
+}
+
+.file:hover {
+    background-color: #f0f0f0;
+}
+
+.list > .file:last-of-type {
+    margin-bottom: 2em;
+}
+
+.footer {
+    margin: auto;
+    margin-right: 1.5em;
+}
+
+.footer > p {
+    font-size: 1.25em;
+}
+
+.footer > p > i {
+    margin: 0 0.3125em;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .file {
+        width: 90%;
+    }
+
+    .file-right {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    #searchInput {
+        width: 100%;
+        margin-top: 0.625em;
+    }
+
+    .file-info {
+        font-size: 0.8em;
+    }
+
+    .footer {
+        font-size: 0.8em;
+        text-align: center;
+        width: 100%;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        background-color: #333;
+        color: #fff;
+    }
+}
